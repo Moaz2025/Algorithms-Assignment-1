@@ -15,10 +15,10 @@ public class DivideAndConquer {
         this.r = A.length - 1;
     }
 
-    public int partition(int []A, int p, int r){
+    public int partition(int[] A, int p, int r){
         int x = A[r];
         int i = p - 1;
-        for(int j = p; j <= r-1; j++){
+        for(int j = p; j <= r - 1; j++){
             if(A[j] <= x){
                 i = i + 1;
                 int temp = A[i];
@@ -32,7 +32,7 @@ public class DivideAndConquer {
         return i + 1;
     }
 
-    public int randomizedPartition(int []A, int p, int r){
+    public int randomizedPartition(int[] A, int p, int r){
         Random random = new Random();
         int i = random.nextInt(r - p + 1) + p;
         int temp = A[i];
@@ -41,7 +41,7 @@ public class DivideAndConquer {
         return partition(A, p, r);
     }
 
-    public int randomizedSelect(int []A, int p, int r, int i){
+    public int randomizedSelect(int[] A, int p, int r, int i){
         if(p == r)
             return A[p];
         int q = randomizedPartition(A, p, r);
