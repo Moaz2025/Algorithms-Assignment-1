@@ -56,7 +56,7 @@ public class LinearTimeSelection {
         and store it in median[] array.*/
         int k;
 
-        // There will be floor((n+4)/5) groups;
+        // There will be floor((n + 4) / 5) groups;
         int[] median = new int[(n + 4) / 5];
         for (k = 0; k < n / 5; k++)
             median[k] = getMedian(A, p + k * 5, p + k * 5 + 5);
