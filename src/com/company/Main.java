@@ -20,25 +20,25 @@ public class Main {
             algorithm = scanner.nextInt();
             if (algorithm == 1) {
                 DivideAndConquer divideAndConquer = new DivideAndConquer(A);
-                long startTime = System.currentTimeMillis();
+                long startTime = System.nanoTime();
                 int result = divideAndConquer.randomizedSelect(A, 0, A.length - 1, i);
-                long endTime = System.currentTimeMillis();
+                long endTime = System.nanoTime();
                 System.out.println("Median is: " + result);
-                System.out.println("Running time = " + (endTime - startTime) + " ms");
+                System.out.println("Running time = " + (endTime - startTime) + " ns");
             } else if (algorithm == 2) {
                 LinearTimeSelection linearTimeSelection = new LinearTimeSelection(A);
-                long startTime = System.currentTimeMillis();
+                long startTime = System.nanoTime();
                 int result = linearTimeSelection.select(A, 0, A.length - 1, i);
-                long endTime = System.currentTimeMillis();
+                long endTime = System.nanoTime();
                 System.out.println("Median is: " + result);
-                System.out.println("Running time = " + (endTime - startTime) + " ms");
+                System.out.println("Running time = " + (endTime - startTime) + " ns");
             } else if (algorithm == 3) {
                 NaiveMethod naiveMethod = new NaiveMethod(A);
-                long startTime = System.currentTimeMillis();
+                long startTime = System.nanoTime();
                 int result = naiveMethod.kthSmallest(A, i);
-                long endTime = System.currentTimeMillis();
+                long endTime = System.nanoTime();
                 System.out.println("Median is: " + result);
-                System.out.println("Running time = " + (endTime - startTime) + " ms");
+                System.out.println("Running time = " + (endTime - startTime) + " ns");
             }
         }
     }
